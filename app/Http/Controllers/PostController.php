@@ -34,7 +34,13 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validate the date
+        $this->validate($request, array(
+                ...
+            ));
+        // store into db
+        
+        // redirect to another page
     }
 
     /**
