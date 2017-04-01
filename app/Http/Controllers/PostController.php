@@ -14,8 +14,9 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {   
+        $posts = Post::all();
+        return view('posts.index')->withPosts($posts);
     }
 
     /**
