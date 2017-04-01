@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class PostController extends Controller
 {
@@ -36,11 +37,20 @@ class PostController extends Controller
     {
         // validate the date
         $this->validate($request, array(
-                ...
+                'title' => 'required|max:191',
+                'body'  => 'required'
             ));
-        // store into db
         
+        // store into db
+        $post = new Post;
+
+        $post->title = $request->title;
+        $post->body = $request->body;
+
+        $post->save();
+
         // redirect to another page
+        return redirect()->route('posts.show', $post->id);
     }
 
     /**
