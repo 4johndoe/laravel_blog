@@ -34,7 +34,7 @@
 						{!! Html::linkRoute('posts.show', 'Cancel', array($post->id), array('class' => 'btn btn-danger btn-block')) !!}
 					</div>
 					<div class="col-sm-6">
-						{!! Html::linkRoute('posts.update', 'Save', array($post->id), array('class' => 'btn btn-success btn-block')) !!}
+						{{ Form::submit('Save Changes', ['class' => 'btn btn-success btn-block']) }}
 					</div>
 				</div>
 			</div>
