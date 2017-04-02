@@ -6,7 +6,7 @@
 
 	<div class="row">
 
-		{!! Form::model($post, ['route' => ['posts.update', $post->id]]) !!}
+		{!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT']) !!}
 
 		<div class="col-md-8">
 
