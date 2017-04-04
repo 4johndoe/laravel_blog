@@ -17,49 +17,19 @@
 
       <div class="row">
         <div class="col-md-8">
-          <div class="post">
-            <h3>Post Title</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, maiores eos doloremque quod eveniet modi reiciendis distinctio impedit eum minus qui a in tempore, maxime nihil iusto ducimus vel esse... 
-            </p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
-          <hr>
 
-          <div class="post">
-            <h3>Post Title</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, maiores eos doloremque quod eveniet modi reiciendis distinctio impedit eum minus qui a in tempore, maxime nihil iusto ducimus vel esse... 
-            </p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
-          <hr>
+        @foreach ($posts as $post)
+            
+            <div class="post">
+              <h3>{{ $post->title }}</h3>
+              <p>
+                {{  substr($post->body, 0, 300) }}{{ strlen($post->body) > 300 ? " ..." : ""}}
+              </p>
+              <a href="#{{-- {{ route('pages.single', $post->id) }} --}}" class="btn btn-primary">Read More</a>
+            </div>
+            <hr>
 
-          <div class="post">
-            <h3>Post Title</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, maiores eos doloremque quod eveniet modi reiciendis distinctio impedit eum minus qui a in tempore, maxime nihil iusto ducimus vel esse... 
-            </p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
-          <hr>
-
-          <div class="post">
-            <h3>Post Title</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, maiores eos doloremque quod eveniet modi reiciendis distinctio impedit eum minus qui a in tempore, maxime nihil iusto ducimus vel esse... 
-            </p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
-          <hr>
-
-          <div class="post">
-            <h3>Post Title</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, maiores eos doloremque quod eveniet modi reiciendis distinctio impedit eum minus qui a in tempore, maxime nihil iusto ducimus vel esse... 
-            </p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
+        @endforeach
           
         </div>
 
