@@ -7,16 +7,21 @@
 		<div class="col-md-8">
 			<h1>{{ $post->title }}</h1>
 			<p class="lead">{{ $post->body }}</p>
+			<p><a href="{{ url($post->slug) }}">{{ $post->slug }}</a></p>
 		</div>
 		<div class="col-md-4">
 			<div class="well">
 				<dl class="dl-horizontal">
-					<dt>Create At:</dt>
-					<dd>{{ date('M j, Y h:i a', strtotime($post->created_at)) }}</dd>
+					<label>Url:</label>
+					<p><a href="{{ url($post->slug) }}">{{ $post->slug }}</a></p>
 				</dl>
 				<dl class="dl-horizontal">
-					<dt>Last Updated:</dt>
-					<dd>{{ date('M j, Y h:i a', strtotime($post->updated_at)) }}</dd>
+					<label>Create At:</label>
+					<p>{{ date('M j, Y h:i a', strtotime($post->created_at)) }}</p>
+				</dl>
+				<dl class="dl-horizontal">
+					<label>Last Updated:</label>
+					<p>{{ date('M j, Y h:i a', strtotime($post->updated_at)) }}</p>
 				</dl>
 				<hr>
 				<div class="row">
