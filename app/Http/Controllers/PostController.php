@@ -40,7 +40,7 @@ class PostController extends Controller
         // validate the date
         $this->validate($request, array(
                 'title' => 'required|max:191',
-                'slug'  => 'required|alpha_dash|min:5|max:191',
+                'slug'  => 'required|alpha_dash|min:5|max:191|unique:posts,slug',
                 'body'  => 'required'
             ));
         
@@ -97,6 +97,7 @@ class PostController extends Controller
         // validate data
         $this->validate($request, array(
                 'title' => 'required|max:191',
+                'slug'  => 'required|alpha_dash|min:5|max:191|unique:posts,slug',
                 'body'  => 'required'
             ));
 
@@ -104,6 +105,7 @@ class PostController extends Controller
         $post = Post::find($id);
 
         $post->title = $request->input('title');
+        $post->slug = $request->input('slug');
         $post->body = $request->input('body');
 
         $post->save();
