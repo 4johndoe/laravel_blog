@@ -32,7 +32,7 @@
 					@foreach ($posts as $post)
 						<tr>
 							<th>{{ $post->id }}</th>
-							<th>{{ $post->title }}</th>
+							<th>{{ substr($post->title, 0, 50) }} {{ strlen($post->title) > 50 ? "..." : "" }}</th>
 							<th>{{ substr($post->body, 0, 50) }} {{ strlen($post->body) > 50 ? "..." : "" }}</th>
 							<th>{{ date('M j, Y', strtotime($post->created_at)) }}</th>
 							<th>
