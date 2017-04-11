@@ -19,7 +19,7 @@
 -- Current Database: `lar_blog`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `lar_blog` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `lar_blog` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
 USE `lar_blog`;
 
@@ -140,4 +140,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-11 17:58:09
+-- Dump completed on 2017-04-11 22:22:18
