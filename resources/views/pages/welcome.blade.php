@@ -25,7 +25,7 @@
               <p>
                 {{  substr($post->body, 0, 300) }}{{ strlen($post->body) > 300 ? " ..." : ""}}
               </p>
-              <a href="#{{-- {{ route('pages.single', $post->id) }} --}}" class="btn btn-primary">Read More</a>
+              <a href="{{ url('blog/' . $post->slug) }}" class="btn btn-primary">Read More</a>
             </div>
             <hr>
 

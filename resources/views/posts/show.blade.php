@@ -7,13 +7,13 @@
 		<div class="col-md-8">
 			<h1>{{ $post->title }}</h1>
 			<p class="lead">{{ $post->body }}</p>
-			<p><a href="{{ url($post->slug) }}">{{ $post->slug }}</a></p>
+			
 		</div>
 		<div class="col-md-4">
 			<div class="well">
 				<dl class="dl-horizontal">
 					<label>Url:</label>
-					<p><a href="{{ url($post->slug) }}">{{ $post->slug }}</a></p>
+					<p><a href="{{ route('blog.single', $post->slug) }}">{{ $post->slug }}</a></p>
 				</dl>
 				<dl class="dl-horizontal">
 					<label>Create At:</label>
